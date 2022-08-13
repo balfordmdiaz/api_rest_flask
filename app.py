@@ -92,6 +92,11 @@ employee_schema = EmployeeSchema()
 employees_schema = EmployeeSchema(many=True)
 
 
+@app.route('/')
+def index():
+    return '<h1>REST API FLASK</h1>'
+
+
 @app.route('/employee', methods=['GET'])
 def get_employees():
 
